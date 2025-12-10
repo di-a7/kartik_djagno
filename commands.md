@@ -20,6 +20,6 @@ django-admin startproject project_name .        # '.' is optional
 # run the server
 python manage.py runserver
 
+# create app
+python manage.py startapp app_name
 
-
-# add gitignore file, git initialize, github repo, send it in viber

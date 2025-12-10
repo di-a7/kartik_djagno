@@ -1,0 +1,13 @@
+MVT architecture
+M: Model
+- data
+- database, table, fields, datatypes
+
+T: Templates
+- user interface
+- html, css, js
+
+V: View
+- logic
+- enable Model and Template to communicate
+- url
