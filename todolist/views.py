@@ -5,5 +5,9 @@ from django.http import HttpResponse
 def first(request):
    return HttpResponse("<h1>Welcome</h1>")
 
+def home(request):
+   return HttpResponse("<h1>This is the Home Page</h1>")
 # create function home, about_us, contact
 # create respective url(home,about_us,contact)
+
+# url -> views

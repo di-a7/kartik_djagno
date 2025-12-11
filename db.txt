@@ -1,0 +1,9 @@
+Table: Todolist
+- title        - charaters(Char)
+- description  - text
+- time         - DateTime
+- priority     - int/char
+- status (Completed, incomplete)    - Boolean 
+
+
+# models -> class/table sturcture -> create migration file -> migrate (models class to database table)

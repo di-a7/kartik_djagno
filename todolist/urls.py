@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import first
+from .views import *   # import all function from views
+# from . import views       # import view file from this directory
 urlpatterns = [
-   path('first/', first)
+   path('first/', first),
+   path('home/', home)
 ]
 

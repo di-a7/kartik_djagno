@@ -23,3 +23,8 @@ python manage.py runserver
 # create app
 python manage.py startapp app_name
 
+# create migration file
+python manage.py makemigrations
+
+# migrate to database
+python manage.py migrate
