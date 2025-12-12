@@ -28,3 +28,27 @@ python manage.py makemigrations
 
 # migrate to database
 python manage.py migrate
+
+# Python shell 
+python manage.py shell
+
+model_name.objects.all()      # all data in that model are displayed
+model_name.objects.all().values()      # all data in that model are displayed with detail
+
+# Create data
+model_name.objects.create(title = "...", description= "....", status = "...", field1 = "...", ....)
+
+# fetch single data from the model/table / Reterive data
+a = model_name.objects.get(id = 1)
+a.field1
+a.field2
+
+# save the updated data
+a.field1 = "new data"
+a.save()
+
+# delete data
+a.delete()
+
+# filter data
+model_name.objects.filter(field1 = "...", field2 = "...", ....)
