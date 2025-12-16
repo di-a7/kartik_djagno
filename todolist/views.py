@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import Todo
 # Create your views here.
 def first(request):
    return HttpResponse("<h1>Welcome</h1>")
@@ -38,6 +38,19 @@ def contact(request):
       "second_line":"This is a contact page rendering from contact function"
    }
    return render(request,'contact.html',context)
+
+def task(request):
+   tasks = Todo.objects.all()
+   total = tasks.count()
+   complete = Todo.objects.filter(status = True).count()
+   incomplete = Todo.objects.filter(status = False).count()
+   context = {
+      "tasks" : tasks,
+      "total_tasks": total,
+      "complete_tasks": complete,
+      "incomplete_tasks": incomplete,
+   }
+   return render(request,'tasks.html', context)
 
 # create function home, about_us, contact
 # create respective url(home,about_us,contact)

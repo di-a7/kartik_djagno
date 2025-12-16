@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Todo List{% endblock title %}
+{% block body %}
+<h3>Todo List</h3>
+<h4>Total tasks: {{total_tasks}}</h4>
+<h4>Completed tasks: {{complete_tasks}}</h4>
+<h4>Incomplete tasks: {{incomplete_tasks}}</h4>
+
+<div class="container">
+   <table class="table table-striped">
+      <thead>
+         <tr>
+            <th scope="col">S.no.</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+         </tr>
+      </thead>
+      <tbody>
+         {% for i in tasks %}
+         <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{i.title}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.status}}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+   </table>
+</div>
+{% endblock body %}

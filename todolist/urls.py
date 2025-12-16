@@ -5,5 +5,6 @@ urlpatterns = [
    path('first/', first),
    path('home/', home),
    path('contact/', contact),
+   path('tasks/', task),
 ]
 
