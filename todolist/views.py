@@ -31,6 +31,13 @@ def home(request):
    }
    return render(request,'home.html', context)
 
+def contact(request):
+   context = {
+      "title" : "Contact",
+      "first_line": "Contact Page",
+      "second_line":"This is a contact page rendering from contact function"
+   }
+   return render(request,'contact.html',context)
 
 # create function home, about_us, contact
 # create respective url(home,about_us,contact)
