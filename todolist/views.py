@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Todo
 # Create your views here.
@@ -54,11 +54,15 @@ def task(request):
    return render(request,'tasks.html', context)
 
 def task_create(request):
-   title = request.POST.get('title')
-   print(title)
+   if request.method == "POST":
+      title1 = request.POST.get('title')
+      description1 = request.POST.get('description')
+      if title1 == "" or description1 == "":
+         context = {
+            "error":"Both fields are required."
+         }
+         return render(request, 'create.html', context)
+      Todo.objects.create(title = title1, description = description1)
+      return redirect('/tasks/')
+   
    return render(request,'create.html')
-
-{
-   "title":"abc",
-   "description":"desdkjfljewj",
-}

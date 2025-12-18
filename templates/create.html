@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Create Task{% endblock title %}
 {% block body %}
+
 <div class="container">
+   {% if error %}
+   <div class="alert alert-danger" role="alert">
+      {{error}}
+   </div>
+   {% endif %}
    <form method="POST">
+      {% csrf_token %}
       <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Title</label>
          <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -15,8 +22,3 @@
    </form>
 </div>
 {% endblock body %}
-
-{
-   "title":"abc",
-   "description":"desdkjfljewj",
-}
