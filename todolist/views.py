@@ -42,7 +42,8 @@ def contact(request):
 def task(request):
    tasks = Todo.objects.all()
    total = tasks.count()
-   complete = Todo.objects.filter(status = True).count()
+   complete = len(Todo.objects.filter(status = True))
+   print(complete)
    incomplete = Todo.objects.filter(status = False).count()
    context = {
       "tasks" : tasks,
@@ -52,7 +53,12 @@ def task(request):
    }
    return render(request,'tasks.html', context)
 
-# create function home, about_us, contact
-# create respective url(home,about_us,contact)
+def task_create(request):
+   title = request.POST.get('title')
+   print(title)
+   return render(request,'create.html')
 
-# url -> views
+{
+   "title":"abc",
+   "description":"desdkjfljewj",
+}

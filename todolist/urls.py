@@ -6,5 +6,6 @@ urlpatterns = [
    path('home/', home),
    path('contact/', contact),
    path('tasks/', task),
+   path('tasks/create/', task_create),
 ]
 
