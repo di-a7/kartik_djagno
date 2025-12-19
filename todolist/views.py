@@ -66,3 +66,25 @@ def task_create(request):
       return redirect('/tasks/')
    
    return render(request,'create.html')
+
+
+def task_edit(request,id):
+   task = Todo.objects.get(id = id)
+   context = {"task":task}
+   if request.method == "POST":
+      title1 = request.POST.get('title')
+      description1 = request.POST.get('description')
+      task.title = title1
+      task.description = description1
+      task.save()
+      return redirect('/tasks/')
+   
+   return render(request, 'edit.html', context)
+
+def task_mark(request,id):
+   task = Todo.objects.get(id = id)
+   task.status = True
+   task.save()
+   return redirect('/tasks/')
+
+# delete method: tasks.html ma button, url, view

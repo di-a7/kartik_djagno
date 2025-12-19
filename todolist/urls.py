@@ -7,5 +7,6 @@ urlpatterns = [
    path('contact/', contact),
    path('tasks/', task),
    path('tasks/create/', task_create),
+   path('tasks/<id>/edit/', task_edit),
+   path('tasks/<id>/mark/', task_mark),
 ]
-
