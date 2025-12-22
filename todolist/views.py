@@ -88,3 +88,21 @@ def task_mark(request,id):
    return redirect('/tasks/')
 
 # delete method: tasks.html ma button, url, view
+
+
+# Recipe website:
+# name
+# description 100
+# ingredients
+# steps
+# image
+# timestamp(creation time)
+# optional(Nutrition Facts,Servings,Total Time,Prep Time)
+
+# create recipe
+# view all recipes(name, image, description(10))
+# view single recipe(show all the details)/edit/delete
+
+# creation
+# landing - > all recipes
+# single recipe view -> edit/delete
