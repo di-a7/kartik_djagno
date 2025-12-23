@@ -52,3 +52,15 @@ a.delete()
 
 # filter data
 model_name.objects.filter(field1 = "...", field2 = "...", ....)
+
+# superuser create
+python manage.py createsuperuser
+
+# freeze/ list out all the packages install or used in this project in requirements.txt file
+pip freeze > requirements.txt 
+
+# to install all packages listed in requirements.txt
+pip install -r requirements.txt
+
+# to uninstall all packages listed in requirements.txt
+pip uninstall -r requirements.txt
