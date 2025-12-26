@@ -106,3 +106,16 @@ def task_mark(request,id):
 # creation
 # landing - > all recipes
 # single recipe view -> edit/delete
+
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serailizer import TaskSerializer
+# API
+@api_view(['GET'])               
+def task_display(request):       #api_view(task_display)
+   todo = Todo.objects.all()
+   serializer = TaskSerializer(todo, many = True)     # object conver to json
+   return Response(serializer.data)
+
+

@@ -7,3 +7,22 @@ Table: Todolist
 
 
 # models -> class/table sturcture -> create migration file -> migrate (models class to database table)
+
+
+
+
+# Restaurant management system:
+# kun kun tables
+# each table ma kun kun fields
+# fields ko datatype
+Table1:
+Field1   datatype
+Field2   datatype
+
+Table2:
+Field1   datatype
+field2   datatype
+
+
+setup a project, app, git, github, .gitignore, .env, requirements,
+# create models

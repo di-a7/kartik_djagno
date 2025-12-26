@@ -9,4 +9,6 @@ urlpatterns = [
    path('tasks/create/', task_create),
    path('tasks/<id>/edit/', task_edit),
    path('tasks/<id>/mark/', task_mark),
+   
+   path('api/tasks/',task_display)
 ]
